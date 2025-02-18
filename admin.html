@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Order List</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Total Price</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.name }}</td>
+            <td>{{ order.email }}</td>
+            <td>{{ order.address }}</td>
+            <td>${{ order.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('admin_logout') }}">Logout</a>
+</body>
+</html>

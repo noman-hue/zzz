@@ -1,0 +1,14 @@
+
+  body {
+    background-image: url('C:\Users\Alta Tech Mark\Desktop\python\e-commerce car\static\images\back.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  .content {
+    text-align: center;
+    color: white;
+    padding-top: 20%;
+  }

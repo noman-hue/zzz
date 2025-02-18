@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Count</title>
+</head>
+<body>
+    <h1>Total Number of Orders: {{ total_orders }}</h1>
+
+    <h2>All Orders</h2>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Total Price</th>
+            <th>Status</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order._id }}</td>
+            <td>{{ order.name }}</td>
+            <td>{{ order.email }}</td>
+            <td>{{ order.address }}</td>
+            <td>{{ order.total_price }}</td>
+            <td>{{ order.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
